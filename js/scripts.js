@@ -1,6 +1,6 @@
 //Prototype
 var PizzaType = {
-	calculateTotal: function(testCost, testPrice) {
+	calculatePrice: function() {
 
 		if (this.name === "cheese") {
 			return "You ordered" + this.name + ". Your total is" + this.cost;
@@ -23,18 +23,12 @@ var cheese = Object.create(PizzaType);
 	cheese.init();
 	cheese.cost = 10.00;
 	cheese.name  = "cheese";
-	cheese.calculateTotal();
+	cheese.calculatePrice();
 
 var pepperoni = Object.create(PizzaType);
 	pepperoni.init();
 	pepperoni.cost = 15.00;
 	pepperoni.name = "pepperoni";
-	pepperoni.calculateTotal();
+	pepperoni.calculatePrice();
 
-//Program steps
 
-//User submits what kind of pizza they want, cheese or pepperoni
-
-//Form input is submitted
-
-//
