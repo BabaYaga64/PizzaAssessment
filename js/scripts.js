@@ -1,11 +1,11 @@
 //Prototype
 var PizzaType = {
-	calculatePrice: function(testPrice) {
+	calculateTotal: function(testCost, testPrice) {
 
 		if (this.name === "cheese") {
-			return "You ordered" + this.name + ". Your total is 10.00";
+			return "You ordered" + this.name + ". Your total is" + this.cost;
 		} else if (this.name === "pepperoni") {
-			return "You ordered" + this.name + ". Your total is 15.00";
+				return "You ordered" + this.name + ". Your total is" + this.cost;
 		}
 
 	},//Ends calculatePrice
@@ -21,15 +21,15 @@ var PizzaType = {
 //Objects that inherit method from PizzaType prototype and have name & cost properties
 var cheese = Object.create(PizzaType);
 	cheese.init();
-	cheese.cost(10);
+	cheese.cost = 10.00;
 	cheese.name  = "cheese";
-	cheese.calculatePrice();
+	cheese.calculateTotal();
 
 var pepperoni = Object.create(PizzaType);
 	pepperoni.init();
-	pepperoni.cost(15);
+	pepperoni.cost = 15.00;
 	pepperoni.name = "pepperoni";
-	pepperoni.calculatePrice();
+	pepperoni.calculateTotal();
 
 //Program steps
 

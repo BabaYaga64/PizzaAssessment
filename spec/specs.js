@@ -8,12 +8,12 @@ describe("PizzaType", function() {
 		});
 	});
 
-	describe("calculatePrice", function() {
-		it("returns price for pizza based on type", function() {
-			var testPrice = Object.create(PizzaType);
-			testPrice.init();
-			testPrice.calculatePrice(10);
-			expect(testPrice.calculatePrice()).to.equal(10);
+	describe("calculateTotal", function() {
+		it("adds pizza cost to Total", function() {
+			var testTotal = Object.create(PizzaType);
+			testTotal.init();
+			testTotal.calculateTotal(10);
+			expect(testTotal.cost).to.equal(10);
 		});
 	});
 
