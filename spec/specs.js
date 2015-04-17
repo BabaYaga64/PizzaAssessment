@@ -1,11 +1,18 @@
-describe("pizzaType", function() {
-	describe("calculatePrice", function() {
-		it("returns price for pizza based on type", function() {
-			var testcalculatePrice = Object.create(PizzaType);
-			testcalculatePrice.calculatePrice(20.00);
-			expect(testcalculatePrice.calculatePrice).to.equal(20.00);
+describe("PizzaType", function() {
+	describe("cost", function() {
+		it("displays the value of cost", function() {
+			var testCost = Object.create(PizzaType);
+			var cost = testCost.cost;
+			expect(cost).to.equal(0);
 		});
 	});
 
-});//Ends pizzaType describe statement
+	describe("calculatePrice", function() {
+		it("returns price for pizza based on type", function() {
+			var testPrice = Object.create(PizzaType);
+			testPrice.calculatePrice(10);
+			expect(testPrice.calculatePrice).to.equal(10);
+		});
+	});
 
+});//Ends pizzaType
