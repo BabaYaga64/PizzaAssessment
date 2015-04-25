@@ -1,19 +1,19 @@
-Pizza Company Assessment
+#Pizza Company Assessment
 
-April 17th, 2015
+##April 17th, 2015
 
-Description
+###Description
 
 This application takes an input of either cheese or pepperoni pizza and calculates the price for the user given their choice. It uses JavaScript, jQuery and the mocha and chai testing frameworks in order to test the method for calculating price. 
 
-Setup Instructions
+###Setup Instructions
 
 1. Download the repository from GitHub. 
 2. Point browser to pizza.html
 3. Select pizza type (cheese or pepperoni)
 4. View price based on selection
 
-The MIT License (MIT)
+###The MIT License (MIT)
 
 Copyright (c) 2015 Bojana Skarich
 
