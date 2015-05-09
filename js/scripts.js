@@ -1,34 +1,43 @@
 //Prototype
-var PizzaType = {
-	calculatePrice: function() {
+var Pizza = {
 
-		if (this.name === "cheese") {
-			return "You ordered" + this.name + ". Your total is" + this.cost;
-		} else if (this.name === "pepperoni") {
-				return "You ordered" + this.name + ". Your total is" + this.cost;
-		}
-
-	},//Ends calculatePrice
-
+	//Initially sets the name property to "cheese" and cost property to 10 dollars.
 	init: function() {
-		this.cost = 0;
-		this.name = "";
-	}//Ends init
+		this.cost = 10;
+		this.name = "cheese";
 
-};//Ends PizzaType Object
+	},//Ends init
+
+	//Function takes name as an argument and adds it to cost property
+	calculatePrice: function(name) {
+		this.cost += name;
+
+	}//Ends calculatePrice
+
+};//Ends Pizza Object
+
+//Instantiates second pizza object
+var secondPizza = Object.create(Pizza);
+	secondPizza.init();
 
 
-//Objects that inherit method from PizzaType prototype and have name & cost properties
-var cheese = Object.create(PizzaType);
-	cheese.init();
-	cheese.cost = 10.00;
-	cheese.name  = "cheese";
-	cheese.calculatePrice();
+$(document).ready(function() {
+	$("form#pizza").submit(function(event) {
 
-var pepperoni = Object.create(PizzaType);
-	pepperoni.init();
-	pepperoni.cost = 15.00;
-	pepperoni.name = "pepperoni";
-	pepperoni.calculatePrice();
+		var newprice = parseInt($("select#menu").val());
+
+		secondPizza.calculatePrice.newprice;
+
+		var totalcost = secondPizza.newprice;
+
+		event.preventDefault();
+
+		$("cost").text(totalcost);
+
+	});
+});
+
+
+
 
 

@@ -10,22 +10,21 @@
 	<div class="container">
 		<h2>Pizzapalooza</h2>
 
-		<form id="new-pizza">
+		<form id="pizza">
 			<div class="form-group">
-				<label type="text" for="type">Choose your pizza type: "cheese" or "pepperoni"</label>
-				<input type="text" id="type" class="form-control">
+				<label type="text" for="type">Choose your pizza type</label>
+				<select id="menu">
+					<option value="1">Cheese</option>
+					<option value="2">Pepperoni</option>
+				</select>
 			</div>
 
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 
-		<h4>Order Summary:</h4>
-		<ul id="your-pizza">
-
-		</ul>
-		<div id="show-order">
-			<h4 id="order"></h4>
-
+		<div id="show-cost">
+			<h4>Order Summary:</h4>
+			<h5 class-"totalcost">Your total is:<span id="cost"> $</span></h5>
 		</div>
 	</div>
 </body>
