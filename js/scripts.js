@@ -17,8 +17,8 @@ var Pizza = {
 };//Ends Pizza Object
 
 //Instantiates second pizza object
-var secondPizza = Object.create(Pizza);
-	secondPizza.init();
+var newPizza = Object.create(Pizza);
+	newPizza.init();
 
 
 $(document).ready(function() {
@@ -26,13 +26,15 @@ $(document).ready(function() {
 
 		var newprice = parseInt($("select#menu").val());
 
-		secondPizza.calculatePrice.newprice;
+		newPizza.calculatePrice.newprice;
 
-		var totalcost = secondPizza.newprice;
+		var totalcost = newPizza.newprice;
 
 		event.preventDefault();
 
 		$("cost").text(totalcost);
+
+		$("show-order").show();
 
 	});
 });
