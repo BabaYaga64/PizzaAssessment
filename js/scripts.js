@@ -34,15 +34,16 @@ $(document).ready(function() {
 		var newPizza = Object.create(Pizza);
 		newPizza.init();
 
-		var newPrice = parseInt($("select#menu").val());
+		//Get the value of the type of topping selected from the form, and set that as a property to the newPizza object
+		var newTopping = $("select#menu").val();
+		newPizza.name = newTopping;
 
-		newPizza.calculatePrice.newPrice;
+		//Cost is calculated from the input value of the form and running the calculatePrice method on the object
+		var totalcost = newPizza.calculatePrice(newTopping);
 
-		var totalcost = newPizza.newPrice;
+		$(".totalcost").text(totalcost);
 
-		$("cost").text(totalcost);
-
-		$("show-order").show();
+		$(".totalcost").show();
 
 	});
 });
