@@ -1,36 +1,44 @@
 //Prototype
 var Pizza = {
 
-	//Initially sets the name property to "cheese" and cost property to 10 dollars.
+	//Initially sets the name property to an empty string.
 	init: function() {
-		this.cost = 10;
-		this.name = "cheese";
+		this.name = "";
 
 	},//Ends init
 
-	//Function takes name as an argument and adds it to cost property
-	calculatePrice: function(name) {
-		this.cost += name;
+	//Initially set cost to 0, then add 10 or 15 depending on the chosen topping.
+	calculatePrice: function() {
+		var cost = 0;
+
+		//2 new property values are added to Pizza object
+		if (this.name === "cheese") {
+			cost += 10;
+		} else if (this.name === "pepperoni") {
+			cost += 15;
+		} 
+
+		return cost;
 
 	}//Ends calculatePrice
 
 };//Ends Pizza Object
 
-//Instantiates second pizza object
-var newPizza = Object.create(Pizza);
-	newPizza.init();
 
 
 $(document).ready(function() {
 	$("form#pizza").submit(function(event) {
-
-		var newprice = parseInt($("select#menu").val());
-
-		newPizza.calculatePrice.newprice;
-
-		var totalcost = newPizza.newprice;
-
 		event.preventDefault();
+
+		//Prototypal inheritance of Pizza object
+		var newPizza = Object.create(Pizza);
+		newPizza.init();
+
+		var newPrice = parseInt($("select#menu").val());
+
+		newPizza.calculatePrice.newPrice;
+
+		var totalcost = newPizza.newPrice;
 
 		$("cost").text(totalcost);
 
