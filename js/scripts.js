@@ -16,7 +16,7 @@ var Pizza = {
 			cost += 10;
 		} else if (this.name === "pepperoni") {
 			cost += 15;
-		} 
+		}
 
 		return cost;
 
@@ -27,7 +27,7 @@ var Pizza = {
 
 
 $(document).ready(function() {
-	$("form#pizza").submit(function(event) {
+	$("#pizza").submit(function(event) {
 		event.preventDefault();
 
 		//Prototypal inheritance of Pizza object
@@ -35,20 +35,16 @@ $(document).ready(function() {
 		newPizza.init();
 
 		//Get the value of the type of topping selected from the form, and set that as a property to the newPizza object
-		var newTopping = $("select#menu").val();
+		var newTopping = $("#menu").val();
 		newPizza.name = newTopping;
 
+
 		//Cost is calculated from the input value of the form and running the calculatePrice method on the object
-		var totalcost = newPizza.calculatePrice(newTopping);
+		var totalcost = newPizza.calculatePrice();
 
-		$(".totalcost").text(totalcost);
+		$("#totalcost").text(totalcost);
 
-		$(".totalcost").show();
+		$("#show-order").show();
 
 	});
 });
-
-
-
-
-
